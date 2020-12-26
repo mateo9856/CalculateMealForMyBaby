@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <title>@ViewData["Title"] - Calculate Meal</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.css" />
+</head>
+<body>
+    <header class="text-center headerStyle">
+        <a class="index" asp-area="" asp-controller="Baby" asp-action="Index">
+            Calculate Meal
+        </a>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+<script src="~/js/script.js"></script>
+<script src="~/lib/twitter-bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

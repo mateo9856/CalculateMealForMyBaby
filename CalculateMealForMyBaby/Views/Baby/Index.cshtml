@@ -1,0 +1,41 @@
+﻿@model Baby
+
+<div class="text-center">
+    
+    <div asp-validation-summary="All"></div>
+    
+
+    <img src="~/images/baby.png" class="babyImage" alt="baby" />
+
+    <p class="mainInfo">Children must have a good food list. They are sensitive to abuse or a poorly prepared nutrition list, here you will fill in the data about
+    your child and will calculate and prepare a nutrition list based on the formula.</p>
+    <p>If you are sure click Start to check form and start filling out the form</p>
+    <a class="btn btn-success buttClick" asp-controller="Baby" asp-action="Index">Start!</a>
+    <div class="formStyle">
+        <form asp-action="Index" method="post">
+            <div class="form-group">
+                <label asp-for="Gender"></label>
+                <span asp-validation-for="Gender">:</span>
+                <input asp-for="Gender" type="radio" name="Gender" value="Boy" checked />Boy
+                <input asp-for="Gender" type="radio" name="Gender" value="Girl" />Girl
+            </div>
+            <div class="form-group">
+                <label asp-for="Height"></label>
+                <span asp-validation-for="Height">:</span>
+                <input asp-for="Height" class="form-control" type="number" name="Height" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight"></label>
+                <span asp-validation-for="Weight">:</span>
+                <input asp-for="Weight" class="form-control" type="number" step="any" name="Weight" />
+            </div>
+            <div class="form-group">
+                <label asp-for="MonthOfBirth"></label>
+                <span asp-validation-for="MonthOfBirth">:</span>
+                <input asp-for="MonthOfBirth" class="form-control" type="number" name="MonthOfBirth" />
+            </div>
+                <input type="submit" class="btn-success" value="Calculate!" />
+        </form>
+    </div>
+</div>
+

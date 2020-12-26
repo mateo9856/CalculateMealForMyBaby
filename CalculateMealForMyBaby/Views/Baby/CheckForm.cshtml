@@ -1,0 +1,12 @@
+﻿@model BabyViewModel
+<div class="container text-center">
+    <h1>@ViewBag.YourChoice</h1>
+    <h1>@Model.Value</h1>
+    @foreach (var item in Model.RenderFoods)
+    {
+        <h3>@item.TimeOfDay</h3>
+        <p>@item.FoodName</p>
+        <p>@item.Description</p>
+    }
+    <a asp-action="Index" asp-controller="Baby" class="btn-success py-1 px-2 border">Main Page</a>
+</div>

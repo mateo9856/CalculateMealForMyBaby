@@ -1,0 +1,11 @@
+﻿@model BabyViewModel
+
+    <h1>Wypełniony został źle formularz!</h1>
+@if (Model.Baby.MonthOfBirth < 5)
+{
+    <h3 class="text-center">Twoje dziecko nie może ważyć aż tyle w tym wieku !!</h3>
+}
+else
+{
+    <h3 class="text-center">Twoje dziecko nie może ważyć aby style=" w tym wieku !!></h3>
+}
